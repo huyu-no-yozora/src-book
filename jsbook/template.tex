@@ -1,0 +1,41 @@
+% MIT License
+% 
+% template.tex
+% 
+% Copyright (c) 2020 冬ノ夜空
+% 
+
+\documentclass[10pt,a4j,openany,dvipdfmx]{jsbook}
+\usepackage{docmute} %for "input" command
+\input{preamble}
+
+\title{{\it Title}}
+\author{{\it Author }\\著者}
+\date{\todaye}
+
+\begin{document}
+\maketitle
+\frontmatter
+% TOC
+\tableofcontents 
+
+\newpage
+
+\input{./intro/Introduction}
+\input{./notation/Notation}
+\mainmatter
+\input{./chap1/chapter1}
+\input{./chap2/chapter2}
+\input{./chap3/chapter3}
+%付録
+\input{./appx/appendixA}
+%謝辞
+\chapter*{謝辞}
+\input{./ack/acknowledgement}
+
+% Reference
+\bibliography{./ref/reference}
+
+\end{document}
+
+
