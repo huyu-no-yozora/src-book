@@ -1,11 +1,16 @@
 # src-book
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-![version](https://img.shields.io/static/v1?label=version&message=v1.0.0&color=brightgreen)
 ![Language](https://img.shields.io/static/v1?label=language&message=LaTeX&color=blueviolet)
+![release](https://img.shields.io/github/v/release/huyu-no-yozora/src-book)
+
+<!-- for public repo -->
+<!-- ![release](https://img.shields.io/github/v/release/[user-name]/[repository-name]) -->
+<!-- for private repo -->
+<!-- ![release](https://img.shields.io/static/v1?label=release&message=v1.0.0&color=brightgreen) -->
 
 
 ## Concept
-This is repository for making some LaTeX document.  
+This is template repository for making some LaTeX document.  
 I will publish this repository to convey the wonderfulness of LaTeX.
 
 
@@ -16,22 +21,22 @@ I will publish this repository to convey the wonderfulness of LaTeX.
 
 
 ## How to use it?
-1. clone repository
-  ```bash
-  git clone git@github.com:huyu-no-yozora/src-book.git
-  ```
+1. clone repository (or "Use this template")
+   ```bash
+   git clone git@github.com:huyu-no-yozora/src-book.git
+   ```
 1. configuration of setup script
-  ```bash
-  cd src-book/tool
-  vim setup.sh
-  ```
-  <font color="red">edit value of "OUTNAME" and "SUBDIR" variable</font>
+   ```bash
+   cd src-book/tool
+   vim setup.sh
+   ```
+1. <font color="red">edit value of "OUTNAME" and "SUBDIR" variable</font>
 
 1. execution of setup script
-  ```bash
-  chmod u+x setup.sh
-  ./setup.sh
-  ```
+   ```bash
+   chmod u+x setup.sh
+   ./setup.sh
+   ```
 1. edit your LaTeX code
  
 1. build your code
