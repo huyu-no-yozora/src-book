@@ -1,7 +1,7 @@
 # src-book
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ![Language](https://img.shields.io/static/v1?label=language&message=LaTeX&color=blueviolet)
-![release](https://img.shields.io/static/v1?label=release&message=v1.0.0&color=brightgreen)
+![release](https://img.shields.io/github/v/release/huyu-no-yozora/src-book)
 
 <!-- for public repo -->
 <!-- ![release](https://img.shields.io/github/v/release/[user-name]/[repository-name]) -->
@@ -10,7 +10,7 @@
 
 
 ## Concept
-This is repository for making some LaTeX document.  
+This is template repository for making some LaTeX document.  
 I will publish this repository to convey the wonderfulness of LaTeX.
 
 
@@ -21,7 +21,7 @@ I will publish this repository to convey the wonderfulness of LaTeX.
 
 
 ## How to use it?
-1. clone repository
+1. clone repository (or "Use this template")
    ```bash
    git clone git@github.com:huyu-no-yozora/src-book.git
    ```
