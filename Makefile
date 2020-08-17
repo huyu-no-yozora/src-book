@@ -17,6 +17,7 @@ template.pdf:
 .PHONY: clean
 clean: 
 	($(MAKE) clean -C $(SUBDIR))
+
 .PHONY: clean-all
 clean-all:
 	($(MAKE) clean-all -C $(SUBDIR))
