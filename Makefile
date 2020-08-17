@@ -1,3 +1,10 @@
+# MIT License
+# 
+# Makefile
+# 
+# Copyright (c) 2020 冬ノ夜空
+# 
+
 TARGETS = template.pdf
 SUBDIR = jsbook
 
