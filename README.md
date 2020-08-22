@@ -49,6 +49,6 @@ I will publish this repository to convey the wonderfulness of LaTeX.
 
 
 ## License
-The source code is licensed by [MIT](LICENSE).
+The source code and documentation in this repository are released under the [MIT License](LICENSE).
 
 
