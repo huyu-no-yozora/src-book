@@ -21,7 +21,7 @@ I will publish this repository to convey the wonderfulness of LaTeX.
 
 
 ## How to use it?
-1. clone repository (or "Use this template")
+1. clone repository
    ```bash
    git clone git@github.com:huyu-no-yozora/src-book.git
    ```
@@ -49,6 +49,6 @@ I will publish this repository to convey the wonderfulness of LaTeX.
 
 
 ## License
-The source code is licensed by [MIT](LICENSE).
+The source code and documentation in this repository are released under the [MIT License](LICENSE).
 
 
