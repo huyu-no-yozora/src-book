@@ -8,8 +8,9 @@
 # 
 
 # = settings ==============================
-OUTNAME="example"  # basename of output pdf
-SUBDIR="note"      # directory name(jsarticle->[SUBDIR])
+REPONAME="src-article" # reository name
+OUTNAME="example"      # basename of output pdf
+SUBDIR="note"          # directory name(jsarticle->[SUBDIR])
 # =========================================
 
 
@@ -20,15 +21,33 @@ function replaceName() {
     
     # definition original string
     local target_str="template"
-    local subdir="jsbook"
+    local subdir="jsarticle"
+
+    # replace text in each file and rename directory
+    replaceString
+
+    # replace a string in Makefile
+    replaceNameForMakefile
+
+}
+
+function replaceString() {
 
     # change directory name
-    mv "${subdir}" "${SUBDIR}" || true
-    mv "${SUBDIR}/${target_str}.tex" "${SUBDIR}/${OUTNAME}.tex" || true
+    mv "${subdir}" "${SUBDIR}" 1> /dev/null
+    mv "${SUBDIR}/${target_str}.tex" "${SUBDIR}/${OUTNAME}.tex" 1> /dev/null
+
+    # replace a string in each file
+    sed -i -e "s@${target_str}@${OUTNAME}@" "${SUBDIR}/${OUTNAME}.tex"
+    sed -i -e "1,10s@src-article@${REPONAME}@g" README.md
+
+}
+
+function replaceNameForMakefile() {
 
     # definition target files of Replacement
     local target_files=("Makefile" "${SUBDIR}/Makefile")
-    
+
     # Replacement
     for file in "${target_files[@]}"
     do
@@ -40,14 +59,32 @@ function replaceName() {
 
 }
 
-# =========================================
+function deleteExcessMakefile() {
+
+    local target_files=("README.md-e" "Makefile-e" "${SUBDIR}/Makefile-e" "${SUBDIR}/${OUTNAME}.tex-e")
+
+    local file
+    for file in "${target_files[@]}"
+    do
+        if [ -e ${file} ]; then rm -f ${file}; fi
+    done
+
+}
 
 # =========================================
-# Main Processing
+
+
+# =========================================
+
+# Pre-Processing
 PARENTDIR=".."
-
 cd ${PARENTDIR}
+
+# Main-Processing
 replaceName
+
+# Post-Processing
+deleteExcessMakefile
 
 # =========================================
 exit
